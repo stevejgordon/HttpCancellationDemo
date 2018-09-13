@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B56FC650-06E5-4E54-B91D-D46A79C80C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "src\MainApp\MainApp.csproj", "{80936620-673A-4163-9580-D97052AB91FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowApiService", "src\SlowApiService\SlowApiService.csproj", "{035E459D-C353-4DC9-9CE3-07634FE8D93A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80936620-673A-4163-9580-D97052AB91FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80936620-673A-4163-9580-D97052AB91FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80936620-673A-4163-9580-D97052AB91FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80936620-673A-4163-9580-D97052AB91FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035E459D-C353-4DC9-9CE3-07634FE8D93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035E459D-C353-4DC9-9CE3-07634FE8D93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035E459D-C353-4DC9-9CE3-07634FE8D93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035E459D-C353-4DC9-9CE3-07634FE8D93A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80936620-673A-4163-9580-D97052AB91FC} = {B56FC650-06E5-4E54-B91D-D46A79C80C99}
+		{035E459D-C353-4DC9-9CE3-07634FE8D93A} = {B56FC650-06E5-4E54-B91D-D46A79C80C99}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57E64B0E-70D4-4536-ABE1-11B00365DD22}
