@@ -14,18 +14,21 @@ namespace SlowApiService.Controllers
         [HttpGet]
         public async Task<ActionResult<string>> GetAsync(CancellationToken ct)
         {
-            ct.Register(() => Console.WriteLine("API request cancelled"));
-            Console.WriteLine("Starting API GET");
+            ct.Register(() => Console.WriteLine("API Service - Client Request cancelled"));
+            Console.WriteLine("API Service - Starting API GET");
             try
             {
-                await Task.Delay(60000, ct);
+                await Task.Delay(120000, ct);
             }
             catch(OperationCanceledException)
             {
+                Console.WriteLine("API Service - Cancellation exception caught");
+                Console.WriteLine("API Service - Ending request");
+
                 return new StatusCodeResult(499); // client closed request
             }
-            Console.WriteLine("Ending API GET");
-            return Ok("Hello");
+            
+            return Ok("Hello from API Service");
         }
 
         [HttpGet]
